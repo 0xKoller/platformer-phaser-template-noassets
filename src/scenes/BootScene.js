@@ -36,7 +36,6 @@ export default class BootScene extends Phaser.Scene {
     this.load.image('p1_duck', `${playerPath}/p1_duck.png`);
     this.load.image('p1_jump', `${playerPath}/p1_jump.png`);
     this.load.image('p1_hurt', `${playerPath}/p1_hurt.png`);
-    this.load.image('p1_front', `${playerPath}/p1_front.png`);
 
     for (let i = 1; i <= 11; i++) {
       const padded = String(i).padStart(2, '0');
@@ -51,7 +50,6 @@ export default class BootScene extends Phaser.Scene {
     this.load.image('slime_walk', `${enemyPath}/slime_walk.png`);
     this.load.image('slime_hit', `${enemyPath}/slime_hit.png`);
     this.load.image('slime_dead', `${enemyPath}/slime_dead.png`);
-    this.load.image('slime_squashed', `${enemyPath}/slime_squashed.png`);
 
     // Spider
     this.load.image('spider', `${enemyPath}/spider.png`);
@@ -77,7 +75,7 @@ export default class BootScene extends Phaser.Scene {
       'sandMid', 'sandCenter', 'sandLeft', 'sandRight',
       'sandHalfLeft', 'sandHalfMid', 'sandHalfRight',
       'brickWall', 'stoneWall',
-      'box', 'fence', 'sign', 'signExit',
+      'fence',
     ];
     for (const name of tileNames) {
       this.load.image(name, `${tilePath}/${name}.png`);
@@ -86,11 +84,10 @@ export default class BootScene extends Phaser.Scene {
     // --- Items / effects ---
     const itemPath = 'assets/kenney/items';
     const itemNames = [
-      'star', 'fireball', 'flagGreen', 'flagGreen2',
-      'coinGold', 'coinSilver',
+      'star', 'fireball', 'flagGreen',
       'particleBrick1a', 'particleBrick1b', 'particleBrick2a', 'particleBrick2b',
       'cloud1', 'cloud2', 'cloud3',
-      'bush', 'plant', 'cactus', 'rock', 'spikes',
+      'bush', 'plant', 'cactus', 'rock',
     ];
     for (const name of itemNames) {
       this.load.image(name, `${itemPath}/${name}.png`);
@@ -99,7 +96,6 @@ export default class BootScene extends Phaser.Scene {
     // --- HUD ---
     const hudPath = 'assets/kenney/hud';
     this.load.image('hud_heartFull', `${hudPath}/hud_heartFull.png`);
-    this.load.image('hud_heartHalf', `${hudPath}/hud_heartHalf.png`);
     this.load.image('hud_heartEmpty', `${hudPath}/hud_heartEmpty.png`);
     this.load.image('hud_p1', `${hudPath}/hud_p1.png`);
 
